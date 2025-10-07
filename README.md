@@ -1,3 +1,4 @@
+[![License: OGL-PH v1.0](https://img.shields.io/badge/License-OGL--PH%20v1.0-brightgreen.svg)](https://datuph.org/licence/ogl-ph-v1)
 # Decentralized Accountable Trust Union (DATU)
 
 ### A Union of Trust, Powered by Transparency.
