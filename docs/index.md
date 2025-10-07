@@ -9,6 +9,7 @@ contributors, partner institutions, and civic stakeholders.
 - **Architecture** – System overview covering consensus, smart contracts, application layers, identity, and security.
 - **Implementation Plan** – Phase-by-phase milestones that translate the vision into deployable software and governance
   processes.
+- **Project Mobilization Suggestion** – Early-alert guidance that distills Phase 0 priorities into immediate coordination steps.
 - **Project Progress** – A running changelog that captures repository updates, documentation improvements, and community
   milestones.
 

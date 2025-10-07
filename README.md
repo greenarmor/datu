@@ -66,6 +66,7 @@ The following documents outline how to materialize the DATU concept into a worki
 
 * [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) – Reference architecture covering consensus, smart contracts, application layer, identity, and security.
 * [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) – Phase-by-phase roadmap detailing activities, deliverables, and success metrics, beginning with a community-first mobilization phase where citizens shape governance, legal priorities, and collaboration tooling.
+* [`docs/project-mobilization.md`](docs/project-mobilization.md) – Suggestion memo that alerts stakeholders to begin Phase 0 coordination activities and align on governance logistics.
 * **Documentation Portal** – MkDocs-powered site that publishes the contents of the `docs/` directory to GitHub Pages (see below for setup details).
 
 ---
