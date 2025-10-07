@@ -21,6 +21,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Ensure README mirrors docs index
+        run: diff -q README.md docs/index.md
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
