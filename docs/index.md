@@ -64,10 +64,18 @@ To establish a **global trust infrastructure** where **governments and citizens 
 
 The following documents outline how to materialize the DATU concept into a working platform:
 
-* [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) – Reference architecture covering consensus, smart contracts, application layer, identity, and security.
-* [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) – Phase-by-phase roadmap detailing activities, deliverables, and success metrics, beginning with a community-first mobilization phase where citizens shape governance, legal priorities, and collaboration tooling.
-* [`docs/project-mobilization.md`](docs/project-mobilization.md) – Suggestion memo that alerts stakeholders to begin Phase 0 coordination activities and align on governance logistics.
+* [`ARCHITECTURE.md`](./ARCHITECTURE.md) – Reference architecture covering consensus, smart contracts, application layer, identity, and security.
+* [`IMPLEMENTATION_PLAN.md`](./IMPLEMENTATION_PLAN.md) – Phase-by-phase roadmap detailing activities, deliverables, and success metrics, beginning with a community-first mobilization phase where citizens shape governance, legal priorities, and collaboration tooling.
+* [`project-mobilization.md`](./project-mobilization.md) – Suggestion memo that alerts stakeholders to begin Phase 0 coordination activities and align on governance logistics.
 * **Documentation Portal** – MkDocs-powered site that publishes the contents of the `docs/` directory to GitHub Pages (see below for setup details).
+
+---
+
+## README & Documentation Synchronization
+
+To keep public-facing content consistent, `README.md` and `docs/index.md` must remain identical. Update `README.md` first, then mirror the changes with `cp README.md docs/index.md` (or your editor's sync command).
+
+The documentation deployment workflow includes a validation step that fails if these files diverge, ensuring GitHub Pages always renders the latest README content.
 
 ---
 
@@ -86,8 +94,8 @@ The development server will watch for file changes inside the `docs/` directory 
 
 ### Continuous deployment
 
-* A GitHub Actions workflow (`.github/workflows/documentation.yml`) installs MkDocs and runs `mkdocs gh-deploy --force` on every push to the `main` branch.
-* The workflow publishes the static site to the `gh-pages` branch. Enable GitHub Pages in the repository settings and point it to the `gh-pages` branch (root) to make the documentation publicly accessible.
+* A GitHub Actions workflow (`.github/workflows/documentation.yml`) installs MkDocs and runs `mkdocs build --strict` on every push to the `main` branch, ensuring broken links fail the build.
+* The resulting static site is uploaded as an artifact and published through `actions/deploy-pages` to the GitHub Pages environment. Enable GitHub Pages in the repository settings and point it to the GitHub Actions deployment source to make the documentation publicly accessible.
 * Update `docs/project-progress.md` with a dated entry whenever notable work is merged so visitors can follow the project's evolution.
 
 ---
