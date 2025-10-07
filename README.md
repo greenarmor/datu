@@ -81,12 +81,12 @@ The documentation deployment workflow includes a validation step that fails if t
 
 ## Documentation & GitHub Pages
 
-DATU now ships with an [MkDocs](https://www.mkdocs.org/) configuration so the repository documentation can be published to GitHub Pages.
+DATU now ships with an [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) configuration so the repository documentation can be published to GitHub Pages with a built-in light/dark theme toggle.
 
 ### Preview locally
 
 ```bash
-pip install mkdocs
+pip install mkdocs-material
 mkdocs serve
 ```
 
@@ -94,7 +94,7 @@ The development server will watch for file changes inside the `docs/` directory 
 
 ### Continuous deployment
 
-* A GitHub Actions workflow (`.github/workflows/documentation.yml`) installs MkDocs and runs `mkdocs build --strict` on every push to the `main` branch, ensuring broken links fail the build.
+* A GitHub Actions workflow (`.github/workflows/documentation.yml`) installs MkDocs Material and runs `mkdocs build --strict` on every push to the `main` branch, ensuring broken links fail the build.
 * The resulting static site is uploaded as an artifact and published through `actions/deploy-pages` to the GitHub Pages environment. Enable GitHub Pages in the repository settings and point it to the GitHub Actions deployment source to make the documentation publicly accessible.
 * Update `docs/project-progress.md` with a dated entry whenever notable work is merged so visitors can follow the project's evolution.
 
