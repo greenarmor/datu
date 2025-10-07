@@ -4,9 +4,9 @@ This roadmap outlines the key milestones required to turn the DATU reference arc
 
 ## Phase 0 – Project Mobilization (Weeks 0-2)
 
-* Establish governance steering committee and working groups (consensus, smart contracts, applications, compliance).
-* Finalize legal and regulatory assessments for operating a public transparency ledger.
-* Stand up collaboration infrastructure (repo management, CI/CD, documentation portal).
+* Establish a community-led governance steering committee and working groups (consensus, smart contracts, applications, compliance) that include citizen coalitions, civic-tech organizations, and open-source contributors alongside public sector representatives.
+* Conduct participatory legal and regulatory assessments through open consultations that surface privacy, transparency, and governance concerns while government advisors help the community navigate compliance requirements.
+* Stand up open collaboration infrastructure (repo management, CI/CD, documentation portal) with transparent contribution guidelines, onboarding resources for volunteers, and government-provided hosting and security support that enable community ownership of the platform.
 
 ## Phase 1 – Consensus Network Foundation (Weeks 3-10)
 

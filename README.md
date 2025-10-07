@@ -9,7 +9,7 @@
 
 **DATU** (the **Decentralized Accountable Trust Union**) is an open blockchain framework designed to bring **transparency, trust, and accountability** into public governance and institutional systems.
 
-By combining **decentralization** with **verifiable transparency**, DATU empowers citizens, auditors, and governments to participate in a **shared, tamper-proof ledger of truth**.
+By combining **decentralization** with **verifiable transparency**, DATU empowers citizens, auditors, and governments to participate in a **shared, tamper-proof ledger of truth**—with the roadmap led by a crowdsourced community and supported by enabling public institutions.
 
 ---
 
@@ -29,9 +29,9 @@ By combining **decentralization** with **verifiable transparency**, DATU empower
 ## Core Principles
 
 1. **Transparency by Design** – Every transaction is visible, verifiable, and immutable.
-2. **Citizen Oversight** – Every wallet holder represents a voice in public accountability.
-3. **Government Partnership** – Built to enhance (not replace) public institutions.
-4. **Open Governance** – Decisions and validations are community-driven and auditable.
+2. **Citizen Leadership** – Everyday contributors set the platform vision and hold institutions accountable.
+3. **Government as Enabler** – Public agencies facilitate legal clarity, infrastructure, and security without controlling the network.
+4. **Open, Crowdsourced Governance** – Decisions and validations are community-driven, auditable, and accessible to new contributors.
 5. **Global Standardization** – Designed to integrate with international transparency protocols.
 
 ---
@@ -65,7 +65,15 @@ To establish a **global trust infrastructure** where **governments and citizens 
 The following documents outline how to materialize the DATU concept into a working platform:
 
 * [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) – Reference architecture covering consensus, smart contracts, application layer, identity, and security.
-* [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) – Phase-by-phase roadmap detailing activities, deliverables, and success metrics.
+* [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) – Phase-by-phase roadmap detailing activities, deliverables, and success metrics, beginning with a community-first mobilization phase where citizens shape governance, legal priorities, and collaboration tooling.
+
+---
+
+## Community Mobilization Highlights
+
+* **Inclusive Steering Committee** – Citizen coalitions, civic-tech groups, and open-source contributors share seats with public sector advisors.
+* **Participatory Legal Review** – Regulatory discussions incorporate public consultations to surface privacy and transparency priorities.
+* **Open Collaboration Infrastructure** – Repositories, CI/CD pipelines, and documentation portals remain accessible for new volunteers, backed by government-provided hosting and security support.
 
 These resources provide a starting point for forming engineering teams, scoping work, and launching pilot networks that embody the DATU principles.
 
