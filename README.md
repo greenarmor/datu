@@ -66,6 +66,28 @@ The following documents outline how to materialize the DATU concept into a worki
 
 * [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) – Reference architecture covering consensus, smart contracts, application layer, identity, and security.
 * [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md) – Phase-by-phase roadmap detailing activities, deliverables, and success metrics, beginning with a community-first mobilization phase where citizens shape governance, legal priorities, and collaboration tooling.
+* **Documentation Portal** – MkDocs-powered site that publishes the contents of the `docs/` directory to GitHub Pages (see below for setup details).
+
+---
+
+## Documentation & GitHub Pages
+
+DATU now ships with an [MkDocs](https://www.mkdocs.org/) configuration so the repository documentation can be published to GitHub Pages.
+
+### Preview locally
+
+```bash
+pip install mkdocs
+mkdocs serve
+```
+
+The development server will watch for file changes inside the `docs/` directory and rebuild the site automatically. Visit `http://127.0.0.1:8000/` in your browser to preview the rendered content.
+
+### Continuous deployment
+
+* A GitHub Actions workflow (`.github/workflows/documentation.yml`) installs MkDocs and runs `mkdocs gh-deploy --force` on every push to the `main` branch.
+* The workflow publishes the static site to the `gh-pages` branch. Enable GitHub Pages in the repository settings and point it to the `gh-pages` branch (root) to make the documentation publicly accessible.
+* Update `docs/project-progress.md` with a dated entry whenever notable work is merged so visitors can follow the project's evolution.
 
 ---
 

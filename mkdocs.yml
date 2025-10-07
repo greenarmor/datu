@@ -1,0 +1,14 @@
+site_name: DATU Documentation
+site_description: "Documentation hub for the Decentralized Accountable Trust Union"
+nav:
+  - Home: index.md
+  - Architecture: ARCHITECTURE.md
+  - Implementation Plan: IMPLEMENTATION_PLAN.md
+  - Project Progress: project-progress.md
+docs_dir: docs
+theme:
+  name: mkdocs
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
