@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Implementation Plan - DATU Documentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">DATU Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ARCHITECTURE/" class="nav-link">Architecture</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Implementation Plan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../project-progress/" class="nav-link">Project Progress</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../ARCHITECTURE/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../project-progress/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#datu-implementation-plan" class="nav-link">DATU Implementation Plan</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#phase-0-project-mobilization-weeks-0-2" class="nav-link">Phase 0 – Project Mobilization (Weeks 0-2)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#phase-1-consensus-network-foundation-weeks-3-10" class="nav-link">Phase 1 – Consensus Network Foundation (Weeks 3-10)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#phase-2-smart-contract-suite-weeks-8-18" class="nav-link">Phase 2 – Smart Contract Suite (Weeks 8-18)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#phase-3-application-layer-weeks-12-26" class="nav-link">Phase 3 – Application Layer (Weeks 12-26)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#phase-4-data-document-layer-weeks-20-32" class="nav-link">Phase 4 – Data &amp; Document Layer (Weeks 20-32)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#phase-5-governance-compliance-weeks-28-36" class="nav-link">Phase 5 – Governance &amp; Compliance (Weeks 28-36)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#phase-6-security-hardening-observability-weeks-32-40" class="nav-link">Phase 6 – Security Hardening &amp; Observability (Weeks 32-40)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#phase-7-pilot-production-launch-weeks-40-52" class="nav-link">Phase 7 – Pilot &amp; Production Launch (Weeks 40-52)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#deliverables-success-metrics" class="nav-link">Deliverables &amp; Success Metrics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="datu-implementation-plan">DATU Implementation Plan<a class="headerlink" href="#datu-implementation-plan" title="Permanent link">&para;</a></h1>
+<p>This roadmap outlines the key milestones required to turn the DATU reference architecture into a production-ready platform.</p>
+<h2 id="phase-0-project-mobilization-weeks-0-2">Phase 0 – Project Mobilization (Weeks 0-2)<a class="headerlink" href="#phase-0-project-mobilization-weeks-0-2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Establish a community-led governance steering committee and working groups (consensus, smart contracts, applications, compliance) that include citizen coalitions, civic-tech organizations, and open-source contributors alongside public sector representatives.</li>
+<li>Conduct participatory legal and regulatory assessments through open consultations that surface privacy, transparency, and governance concerns while government advisors help the community navigate compliance requirements.</li>
+<li>Stand up open collaboration infrastructure (repo management, CI/CD, documentation portal) with transparent contribution guidelines, onboarding resources for volunteers, and government-provided hosting and security support that enable community ownership of the platform.</li>
+</ul>
+<h2 id="phase-1-consensus-network-foundation-weeks-3-10">Phase 1 – Consensus Network Foundation (Weeks 3-10)<a class="headerlink" href="#phase-1-consensus-network-foundation-weeks-3-10" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Stellar Fork Preparation</strong></li>
+<li>Clone Stellar Core and Horizon repositories.</li>
+<li>Define DATU-specific network parameters (genesis accounts, quorum set policy, ledger close intervals).</li>
+<li>Integrate hardware security modules for validator keys.</li>
+<li><strong>Soroban Runtime Integration</strong></li>
+<li>Enable Soroban smart contract support within validator nodes.</li>
+<li>Configure continuous integration for Soroban WASM builds and tests.</li>
+<li><strong>Testnet Launch</strong></li>
+<li>Deploy minimum viable validator set (Tier 0 + Tier 1 organizations).</li>
+<li>Publish public RPC endpoints for developers and observers.</li>
+</ol>
+<h2 id="phase-2-smart-contract-suite-weeks-8-18">Phase 2 – Smart Contract Suite (Weeks 8-18)<a class="headerlink" href="#phase-2-smart-contract-suite-weeks-8-18" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Specification &amp; Modeling</strong></li>
+<li>Draft detailed contract specs for BudgetRegistry, ProcurementLedger, DisbursementTracker, AccountabilityScores, and GovernanceVoting.</li>
+<li>Define state diagrams, event schemas, and failure handling.</li>
+<li><strong>Development &amp; Verification</strong></li>
+<li>Implement contracts in Rust targeting Soroban.</li>
+<li>Write unit, integration, and property-based tests.</li>
+<li>Perform third-party security review and formal analysis for critical invariants.</li>
+<li><strong>Deployment</strong></li>
+<li>Deploy contracts to testnet with controlled access.</li>
+<li>Run scenario simulations with real-world budget/procurement data.</li>
+</ol>
+<h2 id="phase-3-application-layer-weeks-12-26">Phase 3 – Application Layer (Weeks 12-26)<a class="headerlink" href="#phase-3-application-layer-weeks-12-26" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Government Budget Portal</strong></li>
+<li>Build React/Next.js front-end with secure admin workflows.</li>
+<li>Integrate identity verification (OIDC / DID-based) and multi-factor auth.</li>
+<li>Connect to Soroban contracts via Horizon API for transaction submission.</li>
+<li><strong>Public Transparency Portal</strong></li>
+<li>Create public explorer with charts, alerts, and downloadable datasets.</li>
+<li>Implement search and filtering across budget lines, procurements, and disbursements.</li>
+<li><strong>Civic Engagement APIs</strong></li>
+<li>Design REST/GraphQL endpoints with OAuth2 scopes for watchdog applications.</li>
+<li>Provide webhooks and SDKs (JavaScript, Python) for integration.</li>
+</ol>
+<h2 id="phase-4-data-document-layer-weeks-20-32">Phase 4 – Data &amp; Document Layer (Weeks 20-32)<a class="headerlink" href="#phase-4-data-document-layer-weeks-20-32" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Integrate IPFS/Filecoin or compliant national data storage for large artifacts.</li>
+<li>Implement document hashing pipeline and notarization service linking to on-chain transactions.</li>
+<li>Build audit trail dashboards to trace document lifecycle events.</li>
+</ul>
+<h2 id="phase-5-governance-compliance-weeks-28-36">Phase 5 – Governance &amp; Compliance (Weeks 28-36)<a class="headerlink" href="#phase-5-governance-compliance-weeks-28-36" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Operationalize tiered validator onboarding, including KYC/KYB checks.</li>
+<li>Launch on-chain governance using GovernanceVoting contract.</li>
+<li>Draft and ratify protocol upgrade and incident response procedures.</li>
+</ul>
+<h2 id="phase-6-security-hardening-observability-weeks-32-40">Phase 6 – Security Hardening &amp; Observability (Weeks 32-40)<a class="headerlink" href="#phase-6-security-hardening-observability-weeks-32-40" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Establish continuous monitoring with Prometheus/Grafana and alerting runbooks.</li>
+<li>Conduct penetration tests and red-team exercises.</li>
+<li>Finalize disaster recovery and key rotation policies.</li>
+</ul>
+<h2 id="phase-7-pilot-production-launch-weeks-40-52">Phase 7 – Pilot &amp; Production Launch (Weeks 40-52)<a class="headerlink" href="#phase-7-pilot-production-launch-weeks-40-52" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Run pilot with selected government agencies and civil society partners.</li>
+<li>Collect feedback, iterate on UX and contract parameters.</li>
+<li>Scale validator set, finalize legal agreements, and launch public mainnet.</li>
+</ul>
+<h2 id="deliverables-success-metrics">Deliverables &amp; Success Metrics<a class="headerlink" href="#deliverables-success-metrics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Key Deliverables</th>
+<th>Success Indicators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Governance charter, project tooling</td>
+<td>Steering committee operational, documentation hub live</td>
+</tr>
+<tr>
+<td>1</td>
+<td>DATU testnet v1</td>
+<td>&gt;99% validator uptime, ledger close time &lt;5s</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Audited Soroban contracts</td>
+<td>All critical contracts pass formal verification and security review</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Functional portals &amp; APIs</td>
+<td>End-to-end budget submission to public visibility demo</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Document notarization service</td>
+<td>100% of test documents hashed and retrievable</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Governance framework</td>
+<td>Tiered quorum policy ratified on-chain</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Security &amp; observability stack</td>
+<td>Mean time to detect incidents &lt;5 minutes</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Public mainnet</td>
+<td>Pilot agencies onboarded, citizen auditors active</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>This plan can be adapted as the team gains insights from pilots and stakeholder feedback. Each phase should end with a retrospective to refine subsequent milestones.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

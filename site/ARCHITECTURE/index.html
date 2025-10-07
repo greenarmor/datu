@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Architecture - DATU Documentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">DATU Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Architecture</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../IMPLEMENTATION_PLAN/" class="nav-link">Implementation Plan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../project-progress/" class="nav-link">Project Progress</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../IMPLEMENTATION_PLAN/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#datu-reference-architecture" class="nav-link">DATU Reference Architecture</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-system-goals" class="nav-link">1. System Goals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-high-level-component-model" class="nav-link">2. High-Level Component Model</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-stellar-fba-consensus-layer" class="nav-link">3. Stellar FBA Consensus Layer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-soroban-smart-contract-suite" class="nav-link">4. Soroban Smart Contract Suite</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-data-document-layer" class="nav-link">5. Data &amp; Document Layer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-governance-quorum-configuration" class="nav-link">6. Governance &amp; Quorum Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-identity-access-management" class="nav-link">7. Identity &amp; Access Management</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#8-application-layer" class="nav-link">8. Application Layer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#9-observability-compliance" class="nav-link">9. Observability &amp; Compliance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#10-security-considerations" class="nav-link">10. Security Considerations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#11-deployment-blueprint" class="nav-link">11. Deployment Blueprint</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#12-future-enhancements" class="nav-link">12. Future Enhancements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="datu-reference-architecture">DATU Reference Architecture<a class="headerlink" href="#datu-reference-architecture" title="Permanent link">&para;</a></h1>
+<p>This document translates the high-level vision in the root <code>README.md</code> into a concrete, implementable architecture for the Decentralized Accountable Trust Union (DATU).</p>
+<h2 id="1-system-goals">1. System Goals<a class="headerlink" href="#1-system-goals" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Radical transparency</strong> for public spending and institutional activity.</li>
+<li><strong>Citizen participation</strong> in validation and oversight without sacrificing throughput.</li>
+<li><strong>Government partnership</strong> with clear interfaces for budget planning, execution, and audits.</li>
+<li><strong>Global interoperability</strong> via standards-based APIs and data schemas.</li>
+</ul>
+<h2 id="2-high-level-component-model">2. High-Level Component Model<a class="headerlink" href="#2-high-level-component-model" title="Permanent link">&para;</a></h2>
+<pre><code>+------------------+       +------------------------+
+| Citizen Wallets  | &lt;---&gt; | Civic Engagement APIs  |
++------------------+       +------------------------+
+           |                              |
+           v                              v
++---------------------------------------------------------+
+|           Application &amp; Integration Layer               |
+|                                                         |
+| +--------------------+  +-----------------------------+ |
+| | Gov. Budget Portal |  | Public Transparency Portal | |
+| +--------------------+  +-----------------------------+ |
+|        |                           |                     |
+|        v                           v                     |
+| +--------------------+  +-----------------------------+ |
+| | Workflow Services  |  | Analytics &amp; Reporting Svc. | |
+| +--------------------+  +-----------------------------+ |
+|                    |            |                       |
+|                    v            v                       |
+|           +-----------------------------+                |
+|           |     Soroban Smart Contracts |                |
+|           +-----------------------------+                |
+|                           |                               |
++---------------------------|-------------------------------+
+                            v
+                 +------------------------+
+                 | Stellar FBA Network    |
+                 | (DATU Consensus Layer) |
+                 +------------------------+
+</code></pre>
+<h2 id="3-stellar-fba-consensus-layer">3. Stellar FBA Consensus Layer<a class="headerlink" href="#3-stellar-fba-consensus-layer" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fork Stellar Core to create a permissioned-but-open quorum configuration focusing on public sector validators.</li>
+<li><strong>Node types</strong></li>
+<li><em>Government Nodes</em>: National, regional, and municipal computing centers.</li>
+<li><em>Citizen Auditor Nodes</em>: Civil society organizations that meet staking and compliance requirements.</li>
+<li><em>Observer Nodes</em>: Read-only replicas for journalists, NGOs, and watchdog groups.</li>
+<li><strong>Enhancements</strong></li>
+<li>Custom quorum sets for hierarchical governance (see Section 6).</li>
+<li>Integration with Soroban smart contract runtime for policy execution.</li>
+<li>Anchored time-series storage for budget line-items and contract execution proofs.</li>
+</ul>
+<h2 id="4-soroban-smart-contract-suite">4. Soroban Smart Contract Suite<a class="headerlink" href="#4-soroban-smart-contract-suite" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Purpose</th>
+<th>Key Functions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BudgetRegistry</code></td>
+<td>Tracks appropriations, releases, and obligations.</td>
+<td><code>registerBudget()</code>, <code>allocate()</code>, <code>obligate()</code>, <code>closePeriod()</code></td>
+</tr>
+<tr>
+<td><code>ProcurementLedger</code></td>
+<td>Records procurement events, bids, awards, and deliveries.</td>
+<td><code>announceBid()</code>, <code>submitBid()</code>, <code>awardContract()</code>, <code>recordDelivery()</code></td>
+</tr>
+<tr>
+<td><code>DisbursementTracker</code></td>
+<td>Links payment vouchers to budget items and milestones.</td>
+<td><code>createVoucher()</code>, <code>approveVoucher()</code>, <code>settleVoucher()</code></td>
+</tr>
+<tr>
+<td><code>AccountabilityScores</code></td>
+<td>Maintains transparency metrics for agencies and participants.</td>
+<td><code>updateMetric()</code>, <code>issueAlert()</code></td>
+</tr>
+<tr>
+<td><code>GovernanceVoting</code></td>
+<td>Manages proposals and votes for protocol upgrades and policies.</td>
+<td><code>submitProposal()</code>, <code>castVote()</code>, <code>finalizeVote()</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-invariants">Data Invariants<a class="headerlink" href="#data-invariants" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All monetary values recorded in <strong>Transparency Units (TU)</strong>, a non-transferable utility token.</li>
+<li>Each contract emits event logs referencing immutable document hashes stored via IPFS or similar content-addressable storage.</li>
+<li>Role-based access enforced by Soroban authentication interfaces tied to wallet identities.</li>
+</ul>
+<h2 id="5-data-document-layer">5. Data &amp; Document Layer<a class="headerlink" href="#5-data-document-layer" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Off-chain storage</strong> for large artifacts (budgets, contracts, receipts) using IPFS/Filecoin or compliant national data centers.</li>
+<li>Merkle proofs stored on-chain linking to document hashes and version history.</li>
+<li>Public REST/GraphQL API to fetch documents, anchored with blockchain transaction references.</li>
+</ul>
+<h2 id="6-governance-quorum-configuration">6. Governance &amp; Quorum Configuration<a class="headerlink" href="#6-governance-quorum-configuration" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Tiered validation roles</strong>:</li>
+<li><em>Tier 0 (Core)</em> – National audit commissions, central banks.</li>
+<li><em>Tier 1</em> – Regional governments, accredited CSOs.</li>
+<li><em>Tier 2</em> – Citizen auditors with delegated stakes.</li>
+<li>Quorum slices require representation from at least two tiers to ratify a ledger close.</li>
+<li>Upgrade proposals submitted via <code>GovernanceVoting</code> contract with on-chain ballot and audit trail.</li>
+</ul>
+<h2 id="7-identity-access-management">7. Identity &amp; Access Management<a class="headerlink" href="#7-identity-access-management" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Wallet identities managed through DID-compatible credentials issued by government registries and verified civil organizations.</li>
+<li>Multi-factor authentication for operators (hardware keys + biometric or OTP).</li>
+<li>Selective disclosure: citizens choose what personal info is public; all audit-relevant data remains immutable.</li>
+</ul>
+<h2 id="8-application-layer">8. Application Layer<a class="headerlink" href="#8-application-layer" title="Permanent link">&para;</a></h2>
+<h3 id="government-budget-portal">Government Budget Portal<a class="headerlink" href="#government-budget-portal" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Secure dashboards for agencies to encode budget releases and monitor disbursements.</li>
+<li>Workflow engine ensures each action maps to an on-chain transaction (e.g., obligation, disbursement).</li>
+</ul>
+<h3 id="public-transparency-portal">Public Transparency Portal<a class="headerlink" href="#public-transparency-portal" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Read-only explorer for citizens with charts, alerts, and social accountability tools.</li>
+<li>Open data exports in CSV/JSON with machine-readable metadata.</li>
+</ul>
+<h3 id="civic-engagement-apis">Civic Engagement APIs<a class="headerlink" href="#civic-engagement-apis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>OAuth2-protected API for third-party watchdog apps.</li>
+<li>Webhooks for new procurement events, budget releases, or audit findings.</li>
+</ul>
+<h2 id="9-observability-compliance">9. Observability &amp; Compliance<a class="headerlink" href="#9-observability-compliance" title="Permanent link">&para;</a></h2>
+<ul>
+<li>On-chain telemetry aggregated into Prometheus/Grafana dashboards.</li>
+<li>Regular Merkle root snapshots for auditing.</li>
+<li>Compliance workflows aligning with national procurement and auditing laws.</li>
+</ul>
+<h2 id="10-security-considerations">10. Security Considerations<a class="headerlink" href="#10-security-considerations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Hardware Security Modules (HSMs) for validator key custody.</li>
+<li>Formal verification of critical Soroban contracts using property-based testing frameworks.</li>
+<li>Continuous vulnerability scanning of node software and infrastructure.</li>
+<li>Incident response runbooks with on-chain signaling for emergency shutdowns.</li>
+</ul>
+<h2 id="11-deployment-blueprint">11. Deployment Blueprint<a class="headerlink" href="#11-deployment-blueprint" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Bootstrap genesis ledger with government and accredited civil society validators.</li>
+<li>Deploy Soroban contracts with multi-signature governance oversight.</li>
+<li>Launch staging network for pilot agencies and iterate on contract parameters.</li>
+<li>Roll out production network with phased onboarding of agencies and citizen auditors.</li>
+</ol>
+<h2 id="12-future-enhancements">12. Future Enhancements<a class="headerlink" href="#12-future-enhancements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Cross-border transparency data exchange via inter-ledger protocols.</li>
+<li>Mobile-first citizen wallet with localized languages and accessibility features.</li>
+<li>AI-assisted anomaly detection on procurement and disbursement patterns.</li>
+</ul>
+<hr />
+<p>This architecture document should serve as the baseline for the initial implementation milestones described in <code>IMPLEMENTATION_PLAN.md</code>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
