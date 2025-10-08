@@ -4,18 +4,43 @@ This suggested mobilization agenda provides an early alert for stakeholders so t
 
 ## Immediate Mobilization Signals
 
-- **Confirm Steering Committee Invitations**  
-  Circulate invitations to citizen coalitions, civic-tech partners, transparency NGOs, and enabling public institutions. Clarify expectations for weekly syncs and decision-making protocols so the committee can formally convene.
-- **Launch Regulatory Listening Sessions**  
-  Schedule open consultations with legal, privacy, and procurement experts. Capture emergent questions in a public tracker and route them to government advisors who can map compliance pathways.
-- **Harden Collaboration Infrastructure**  
-  Audit repository permissions, documentation onboarding steps, and CI/CD workflows. Publish a short “getting started” guide so new volunteers can join sprints without friction.
+- **Confirm Steering Committee Invitations**
+  - Send dated invitations to citizen coalitions, civic-tech partners, transparency NGOs, and enabling public institutions.
+  - Provide an onboarding packet containing the draft charter, expected cadence (weekly sync + monthly retrospective), and decision-making rubric.
+  - Track RSVPs in a shared roster and escalate unconfirmed seats within 48 hours.
+- **Launch Regulatory Listening Sessions**
+  - Schedule at least two consultations each with legal/privacy, procurement, and data-protection specialists.
+  - Capture emergent questions in a public tracker and assign a government or civil-society owner to each follow-up.
+  - Summarize key risks and mitigation options in a briefing note for the steering committee ahead of the first sync.
+- **Harden Collaboration Infrastructure**
+  - Audit repository permissions, documentation onboarding steps, and CI/CD workflows; record findings in a checklist with completion dates.
+  - Publish a short “getting started” guide so new volunteers can join sprints without friction.
+  - Test incident response by running a mock “broken build” drill and documenting expected response roles.
 
-## Recommended Next Steps
+## Two-Week Execution Checklist
 
-1. Publish a kickoff announcement summarizing the Implementation Plan and inviting stakeholders to the first governance sync.
-2. Assign interim coordinators for the consensus, smart contract, application, and compliance working groups.
-3. Stand up a shared calendar, discussion forum, and decision log to reinforce transparency during mobilization.
+| Day | Action | Owner | Evidence of Completion |
+| --- | --- | --- | --- |
+| 1 | Issue kickoff announcement summarizing the Implementation Plan and inviting stakeholders to governance sync | Project coordinator | Announcement posted to community channels |
+| 2 | Confirm interim coordinators for consensus, smart contract, application, and compliance working groups | Steering committee chair | Names and contacts recorded in roster |
+| 3 | Publish shared calendar, asynchronous decision log, and communication channels (forum + chat) | Collaboration ops lead | Links added to documentation portal |
+| 5 | Hold first regulatory listening session; log questions and assign owners | Compliance liaison | Tracker updated with action items |
+| 7 | Complete access review of repositories, documentation portal, and CI/CD | DevOps lead | Access report and remediation notes |
+| 9 | Conduct mock incident drill on CI/CD pipeline | DevOps lead + working groups | Post-incident notes with lessons learned |
+| 10 | Review governance charter and working group scopes in steering committee meeting | Steering committee | Approved charter published |
+| 12 | Publish regulatory briefing note with risk mitigation guidance for Phase 1 | Compliance liaison | Brief uploaded to documentation portal |
+| 14 | Circulate mobilization status report confirming readiness to enter Phase 1 | Project coordinator | Report distributed to steering committee and archived |
+
+## Exit Report Template
+
+Use the following outline when sending the Phase 0 completion update to all stakeholders:
+
+1. **Overview:** Date, reporting lead, and summary of mobilization outcomes.
+2. **Governance Readiness:** Confirmed membership roster, charter approval status, and upcoming meeting schedule.
+3. **Regulatory Alignment:** Key findings from listening sessions, open issues with owners, and mitigation commitments.
+4. **Collaboration Infrastructure:** Checklist status (access reviews, onboarding materials, incident drill results) and links to documentation.
+5. **Risks & Mitigations:** Any blockers preventing Phase 1 kickoff and actions planned to resolve them.
+6. **Call to Action:** Specific asks for Phase 1 contributors (e.g., validator nominations, contract requirement submissions).
 
 ---
 

@@ -4,9 +4,22 @@ This roadmap outlines the key milestones required to turn the DATU reference arc
 
 ## Phase 0 – Project Mobilization (Weeks 0-2)
 
-* Establish a community-led governance steering committee and working groups (consensus, smart contracts, applications, compliance) that include citizen coalitions, civic-tech organizations, and open-source contributors alongside public sector representatives.
-* Conduct participatory legal and regulatory assessments through open consultations that surface privacy, transparency, and governance concerns while government advisors help the community navigate compliance requirements.
-* Stand up open collaboration infrastructure (repo management, CI/CD, documentation portal) with transparent contribution guidelines, onboarding resources for volunteers, and government-provided hosting and security support that enable community ownership of the platform.
+1. **Governance Mobilization**
+   * Draft and circulate a steering committee charter that defines decision domains, quorum rules, and conflict resolution paths.
+   * Confirm named representatives for consensus, smart contract, application, and compliance working groups; record their contact information and availability in a shared roster.
+   * Schedule the first three governance syncs and publish agendas covering validator onboarding policy, risk management expectations, and milestone approvals.
+2. **Regulatory & Risk Alignment**
+   * Host at least two listening sessions with legal, privacy, and procurement experts to capture jurisdiction-specific requirements.
+   * Open a compliance tracker (issues board or shared spreadsheet) that maps outstanding questions to accountable owners and due dates.
+   * Produce a public-facing summary of regulatory constraints and mitigations to guide Phase 1 engineering decisions.
+3. **Collaboration Infrastructure**
+   * Complete access reviews for repositories, documentation portals, and communication tools; revoke unused accounts and enable MFA for administrators.
+   * Publish contributor onboarding materials, including contribution guidelines, CLA instructions if needed, and a 48-hour response SLA for support requests.
+   * Validate CI/CD pipelines with a dry-run build of the existing codebase and document the process for filing infrastructure incidents.
+4. **Exit Criteria Before Phase 1 Begins**
+   * Steering committee roster, working group membership, and governance charter are approved and posted to the documentation portal.
+   * Compliance tracker shows all critical legal and regulatory questions assigned with target resolution dates.
+   * Collaboration infrastructure checklist is complete, and a mobilization status report confirms stakeholders can join development activities without blockers.
 
 ## Phase 1 – Consensus Network Foundation (Weeks 3-10)
 
