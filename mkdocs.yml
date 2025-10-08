@@ -5,6 +5,7 @@ nav:
   - Architecture: ARCHITECTURE.md
   - Implementation Plan: IMPLEMENTATION_PLAN.md
   - Project Mobilization: project-mobilization.md
+  - Consensus: consensus-scp.md
   - Project Progress: project-progress.md
 docs_dir: docs
 theme:
