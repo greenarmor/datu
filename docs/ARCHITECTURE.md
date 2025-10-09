@@ -61,8 +61,8 @@ This document translates the high-level vision in the root `README.md` into a co
 | `BudgetRegistry` | Tracks appropriations, releases, and obligations. | `registerBudget()`, `allocate()`, `obligate()`, `closePeriod()` |
 | `ProcurementLedger` | Records procurement events, bids, awards, and deliveries. | `announceBid()`, `submitBid()`, `awardContract()`, `recordDelivery()` |
 | `DisbursementTracker` | Links payment vouchers to budget items and milestones. | `createVoucher()`, `approveVoucher()`, `settleVoucher()` |
-| `AccountabilityScores` | Maintains transparency metrics for agencies and participants. | `updateMetric()`, `issueAlert()` |
-| `GovernanceVoting` | Manages proposals and votes for protocol upgrades and policies. | `submitProposal()`, `castVote()`, `finalizeVote()` |
+| `AccountabilityScores` | Maintains transparency metrics for agencies and participants. | `registerAuditor()`, `updateMetric()`, `issueAlert()` |
+| `GovernanceVoting` | Manages proposals and votes for protocol upgrades and policies. | `submitProposal()`, `castVote()`, `finalizeVote()`, `delegateAccountability()`, `reclaimAccountability()` |
 
 ### Data Invariants
 
@@ -82,6 +82,9 @@ This document translates the high-level vision in the root `README.md` into a co
   * *Tier 0 (Core)* – National audit commissions, central banks.
   * *Tier 1* – Regional governments, accredited CSOs.
   * *Tier 2* – Citizen auditors with delegated stakes.
+    *In this context “delegated stakes” refers to non-custodial accountability weight that higher-tier institutions assign to trusted citizen auditors; no personal financial collateral is required.*
+    *Technical flow*: (1) a citizen registers their wallet DID and compliance credentials via the `AccountabilityScores` module; (2) a higher-tier institution signs a `delegateAccountability()` Soroban transaction that locks a quota of its validator weight to the citizen’s auditor address without transferring custody; (3) the delegation is recorded on-chain as metadata consumed by Stellar Core when building quorum slices, so the citizen node can vote with the delegated weight; (4) delegators can revoke or rotate the delegation with a `reclaimAccountability()` transaction, instantly removing the borrowed weight from the citizen’s node if misbehavior is detected. The citizen’s wallet therefore acts as the key pair for signing audit attestations while institutional capital remains in place.
+    *Transparency Units stay with the delegating institution—citizen auditors need only maintain a verified wallet; they never escrow or control the underlying TU balances that back the delegated accountability weight.*
 * Quorum slices require representation from at least two tiers to ratify a ledger close.
 * Upgrade proposals submitted via `GovernanceVoting` contract with on-chain ballot and audit trail.
 
