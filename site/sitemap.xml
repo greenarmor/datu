@@ -1,3 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://datuph.github.io/datu/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://datuph.github.io/datu/ARCHITECTURE/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://datuph.github.io/datu/IMPLEMENTATION_PLAN/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://datuph.github.io/datu/consensus-scp/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://datuph.github.io/datu/government-blockchain-explainer/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://datuph.github.io/datu/project-mobilization/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://datuph.github.io/datu/project-progress/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://datuph.github.io/datu/stellar-fork-environment/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
 </urlset>

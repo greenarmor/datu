@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  datu-stellar:
+    image: stellar/quickstart:latest
+    container_name: datu-stellar
+    command:
+      - "--local"
+      - "--enable-soroban-rpc"
+      - "--enable-soroban-diagnostic-events"
+    environment:
+      NETWORK: local
+      ENABLE_SOROBAN_RPC: "true"
+      ENABLE_SOROBAN_DIAGNOSTIC_EVENTS: "true"
+    ports:
+      - "8000:8000"    # Horizon + Soroban RPC
+      - "11625:11625"  # Stellar Core peer port
+      - "11626:11626"  # Stellar Core HTTP admin port
+    volumes:
+      - datu-stellar-state:/var/lib/stellar
+      - ./config:/config
+    restart: unless-stopped
+volumes:
+  datu-stellar-state:

@@ -41,6 +41,7 @@ This roadmap outlines the key milestones required to turn the DATU reference arc
    * Clone Stellar Core and Horizon repositories.
    * Define DATU-specific network parameters (genesis accounts, quorum set policy, ledger close intervals).
    * Integrate hardware security modules for validator keys.
+   * Stand up the Docker Compose fork in `infrastructure/stellar-fork/` to validate configuration changes quickly.
 2. **Soroban Runtime Integration**
    * Enable Soroban smart contract support within validator nodes.
    * Configure continuous integration for Soroban WASM builds and tests.

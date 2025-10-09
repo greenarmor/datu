@@ -9,6 +9,13 @@ og_image: assets/datu-social-cover.jpg
 This changelog captures notable updates to the DATU repository and documentation hub. Add a dated entry whenever meaningful
 work is merged so contributors can quickly review recent activity.
 
+## 2025-10-10 – Local Stellar Fork Available
+
+- Published a Docker Compose-powered Stellar fork so engineers can run consensus, Horizon, and
+  Soroban locally via `./scripts/stellar-fork/start.sh`.
+- Documented runbooks and troubleshooting guidance in the repository and documentation portal.
+- Began defining follow-on work for multi-node quorum modeling and passphrase management.
+
 ## 2025-10-09 – Phase 1 Kickoff with Deferred Mobilization Wrap-up
 
 - Authorized the consensus network team to begin Phase 1 Stellar fork work while remaining Phase 0 mobilization tasks stay in a tracked backlog.

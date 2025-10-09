@@ -108,6 +108,10 @@ The development server will watch for file changes inside the `docs/` directory 
 * The resulting static site is uploaded as an artifact and published through `actions/deploy-pages` to the GitHub Pages environment. Enable GitHub Pages in the repository settings and point it to the GitHub Actions deployment source to make the documentation publicly accessible.
 * Update `docs/project-progress.md` with a dated entry whenever notable work is merged so visitors can follow the project's evolution.
 
+### Why is the `site/` directory in version control?
+
+`site/` contains the fully rendered MkDocs output—HTML, CSS, JavaScript, and search indexes—that GitHub Pages (or any static web host) serves directly. Committing these generated assets keeps the documentation snapshot in lockstep with the repository's source material, lets teams review the exact files that will deploy without rebuilding locally, and supports downstream consumers that vendor the published docs as part of their own releases. If your deployment pipeline rebuilds the site automatically, you can exclude `site/` by updating `.gitignore`; otherwise, keeping it tracked guarantees the portal remains accessible even when CI/CD infrastructure is unavailable.
+
 ---
 
 ## Community Mobilization Highlights
@@ -117,6 +121,26 @@ The development server will watch for file changes inside the `docs/` directory 
 * **Open Collaboration Infrastructure** – Repositories, CI/CD pipelines, and documentation portals remain accessible for new volunteers, backed by government-provided hosting and security support.
 
 These resources provide a starting point for forming engineering teams, scoping work, and launching pilot networks that embody the DATU principles.
+
+---
+
+## Local Stellar Fork Test Network
+
+DATU now ships with a runnable fork of the Stellar network so engineers can exercise consensus,
+Soroban smart contracts, and Horizon APIs without waiting for public infrastructure.
+
+1. **Install Docker + Compose** – Confirm `docker --version` and `docker compose version` both work.
+2. **Start the fork** – From the repository root run `./scripts/stellar-fork/start.sh` to launch the
+   [`stellar/quickstart`](https://github.com/stellar/quickstart)-based validator. The container exposes:
+   * `http://localhost:8000` for Horizon REST and Soroban JSON-RPC (`/rpc`).
+   * `http://localhost:8000/friendbot` to fund development accounts on the forked ledger.
+   * `http://localhost:11626` for Stellar Core’s administrative HTTP interface.
+3. **Shut down when finished** – Execute `./scripts/stellar-fork/stop.sh` to stop the container while
+   preserving state in the `datu-stellar-state` Docker volume. Remove the volume to reset the ledger.
+
+The compose file lives under `infrastructure/stellar-fork/` so teams can extend it with additional
+validators, custom quorum sets, or bespoke network passphrases as the project matures. Consult the
+Stellar Fork Environment guide in the documentation portal for deeper runbooks and topology patterns.
 
 ---
 

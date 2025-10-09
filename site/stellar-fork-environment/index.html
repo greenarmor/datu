@@ -6,15 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Running changelog documenting notable updates to the DATU repository and documentation portal for contributors.">
+        <meta name="description" content="How to launch the local Stellar fork used for DATU development and testing.">
       
       
       
-        <link rel="canonical" href="https://datuph.github.io/datu/project-progress/">
+        <link rel="canonical" href="https://datuph.github.io/datu/stellar-fork-environment/">
       
       
-        <link rel="prev" href="../project-mobilization/">
+        <link rel="prev" href="../consensus-scp/">
       
+      
+        <link rel="next" href="../IMPLEMENTATION_PLAN/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Project Progress - DATU Documentation</title>
+        <title>DATU Stellar Fork Environment - DATU Documentation</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-progress" class="md-skip">
+        <a href="#datu-stellar-fork-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project Progress
+              DATU Stellar Fork Environment
             
           </span>
         </div>
@@ -411,18 +413,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -438,7 +442,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Infrastructure
@@ -449,10 +453,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../stellar-fork-environment/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Stellar Fork Environment
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -463,6 +489,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why this matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launch-the-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launch the fork
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-the-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop the fork
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting tips
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -479,20 +579,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -508,7 +606,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Delivery Roadmap
@@ -565,32 +663,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Project Progress
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../project-progress/" class="md-nav__link">
         
   
   
@@ -601,62 +677,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#2025-10-10-local-stellar-fork-available" class="md-nav__link">
-    <span class="md-ellipsis">
-      2025-10-10 – Local Stellar Fork Available
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2025-10-09-phase-1-kickoff-with-deferred-mobilization-wrap-up" class="md-nav__link">
-    <span class="md-ellipsis">
-      2025-10-09 – Phase 1 Kickoff with Deferred Mobilization Wrap-up
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2025-10-08-project-mobilization-suggestion-published" class="md-nav__link">
-    <span class="md-ellipsis">
-      2025-10-08 – Project Mobilization Suggestion Published
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2025-10-07-documentation-portal-foundation" class="md-nav__link">
-    <span class="md-ellipsis">
-      2025-10-07 – Documentation Portal Foundation
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -696,36 +716,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#2025-10-10-local-stellar-fork-available" class="md-nav__link">
+  <a href="#why-this-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      2025-10-10 – Local Stellar Fork Available
+      Why this matters
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2025-10-09-phase-1-kickoff-with-deferred-mobilization-wrap-up" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      2025-10-09 – Phase 1 Kickoff with Deferred Mobilization Wrap-up
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2025-10-08-project-mobilization-suggestion-published" class="md-nav__link">
+  <a href="#launch-the-fork" class="md-nav__link">
     <span class="md-ellipsis">
-      2025-10-08 – Project Mobilization Suggestion Published
+      Launch the fork
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2025-10-07-documentation-portal-foundation" class="md-nav__link">
+  <a href="#stop-the-fork" class="md-nav__link">
     <span class="md-ellipsis">
-      2025-10-07 – Documentation Portal Foundation
+      Stop the fork
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting tips
     </span>
   </a>
   
@@ -747,36 +785,89 @@
 
 
 
-<h1 id="project-progress">Project Progress<a class="headerlink" href="#project-progress" title="Permanent link">&para;</a></h1>
-<p>This changelog captures notable updates to the DATU repository and documentation hub. Add a dated entry whenever meaningful
-work is merged so contributors can quickly review recent activity.</p>
-<h2 id="2025-10-10-local-stellar-fork-available">2025-10-10 – Local Stellar Fork Available<a class="headerlink" href="#2025-10-10-local-stellar-fork-available" title="Permanent link">&para;</a></h2>
+<h1 id="datu-stellar-fork-environment">DATU Stellar Fork Environment<a class="headerlink" href="#datu-stellar-fork-environment" title="Permanent link">&para;</a></h1>
+<p>To unblock engineering teams, DATU provides a runnable fork of the Stellar network that mirrors our
+federated Byzantine agreement plans. The environment is backed by the official
+<a href="https://github.com/stellar/quickstart"><code>stellar/quickstart</code></a> container and enables Horizon, Stellar
+Core, and Soroban JSON-RPC services with a single command.</p>
+<h2 id="why-this-matters">Why this matters<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Published a Docker Compose-powered Stellar fork so engineers can run consensus, Horizon, and
-  Soroban locally via <code>./scripts/stellar-fork/start.sh</code>.</li>
-<li>Documented runbooks and troubleshooting guidance in the repository and documentation portal.</li>
-<li>Began defining follow-on work for multi-node quorum modeling and passphrase management.</li>
+<li><strong>Immediate testing</strong> – Run consensus flows, Soroban contracts, and Horizon queries locally without
+  waiting for shared infrastructure.</li>
+<li><strong>Deterministic ledger</strong> – The fork uses a dedicated history archive and root account so changes are
+  reproducible across machines.</li>
+<li><strong>Extensible topology</strong> – Compose files can be extended to add validator tiers that match DATU’s
+  quorum strategy before deploying to shared hosting environments.</li>
 </ul>
-<h2 id="2025-10-09-phase-1-kickoff-with-deferred-mobilization-wrap-up">2025-10-09 – Phase 1 Kickoff with Deferred Mobilization Wrap-up<a class="headerlink" href="#2025-10-09-phase-1-kickoff-with-deferred-mobilization-wrap-up" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>Ensure Docker and the Compose plugin are installed:</p>
+<pre><code class="language-bash">docker --version
+docker compose version
+</code></pre>
+<p>Allocate at least 4 CPU cores and 6 GB RAM for the container. The quickstart image bundles
+PostgreSQL, Horizon, Stellar Core, Soroban RPC, and Friendbot, so sufficient resources keep ledger
+close times predictable.</p>
+<h2 id="launch-the-fork">Launch the fork<a class="headerlink" href="#launch-the-fork" title="Permanent link">&para;</a></h2>
+<p>From the repository root run:</p>
+<pre><code class="language-bash">./scripts/stellar-fork/start.sh
+</code></pre>
+<p>The script wraps <code>docker compose</code> and targets the <code>infrastructure/stellar-fork/docker-compose.yml</code>
+definition. It provisions a <code>datu-stellar</code> container with:</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Service</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>8000</code></td>
+<td>Horizon REST + Soroban RPC</td>
+<td>JSON-RPC lives at <code>/rpc</code>. Friendbot funds accounts via <code>/friendbot</code>.</td>
+</tr>
+<tr>
+<td><code>11625</code></td>
+<td>Stellar Core peer port</td>
+<td>Use this to connect additional validators or observers.</td>
+</tr>
+<tr>
+<td><code>11626</code></td>
+<td>Stellar Core admin HTTP</td>
+<td><code>GET /info</code> for core status, <code>/quorum</code> for quorum analysis.</td>
+</tr>
+</tbody>
+</table>
+<p>Once the container reports <code>State: running</code>, fund a new account:</p>
+<pre><code class="language-bash">curl &quot;http://localhost:8000/friendbot?addr=GA...&quot;
+</code></pre>
+<p>Horizon will return the transaction hash that created the account on the forked ledger.</p>
+<h2 id="stop-the-fork">Stop the fork<a class="headerlink" href="#stop-the-fork" title="Permanent link">&para;</a></h2>
+<pre><code class="language-bash">./scripts/stellar-fork/stop.sh
+</code></pre>
+<p>State persists inside the <code>datu-stellar-state</code> Docker volume. Remove the volume to reset the ledger:</p>
+<pre><code class="language-bash">docker volume rm datu-stellar-state
+</code></pre>
+<h2 id="custom-configuration">Custom configuration<a class="headerlink" href="#custom-configuration" title="Permanent link">&para;</a></h2>
+<p>The compose file mounts the <code>infrastructure/stellar-fork/config/</code> directory into the container at
+<code>/config</code>. Drop additional configuration files here to:</p>
 <ul>
-<li>Authorized the consensus network team to begin Phase 1 Stellar fork work while remaining Phase 0 mobilization tasks stay in a tracked backlog.</li>
-<li>Published guidance in the implementation plan outlining immediate coordination checkpoints so governance, compliance, and tooling owners continue closing their deliverables during the fork.</li>
-<li>Established a shared risk register to monitor any blockers created by running mobilization and engineering activities in parallel.</li>
+<li>Override quorum definitions (<code>quorumsets.toml</code>)</li>
+<li>Seed validator keypairs or pre-funded accounts</li>
+<li>Toggle Soroban diagnostic settings</li>
 </ul>
-<h2 id="2025-10-08-project-mobilization-suggestion-published">2025-10-08 – Project Mobilization Suggestion Published<a class="headerlink" href="#2025-10-08-project-mobilization-suggestion-published" title="Permanent link">&para;</a></h2>
+<p>Extend the compose file with more services when you are ready to model DATU’s tiered validator
+structure. Each new node should re-use the same network passphrase but own a distinct keypair and
+persistent volume.</p>
+<h2 id="troubleshooting-tips">Troubleshooting tips<a class="headerlink" href="#troubleshooting-tips" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Documented a mobilization suggestion memo to alert stakeholders about immediate governance and coordination actions for Phase 0.</li>
-<li>Linked the mobilization guidance from the documentation hub and repository overview so contributors can find it quickly.</li>
+<li><code>docker compose -f infrastructure/stellar-fork/docker-compose.yml logs -f</code> streams all services.</li>
+<li>Ensure ports 8000, 11625, and 11626 are free before launching.</li>
+<li>Reset the environment by stopping the container and removing the Docker volume as shown above.</li>
 </ul>
-<h2 id="2025-10-07-documentation-portal-foundation">2025-10-07 – Documentation Portal Foundation<a class="headerlink" href="#2025-10-07-documentation-portal-foundation" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Added an <a href="https://www.mkdocs.org/">MkDocs</a> configuration to publish the DATU documentation to GitHub Pages.</li>
-<li>Introduced a documentation homepage summarizing available resources and contribution steps.</li>
-<li>Created this running progress log to capture future updates across architecture, implementation planning, and community
-  initiatives.</li>
-<li>Automated GitHub Pages deployment through a dedicated workflow that builds and pushes the site on every change to the default
-  branch.</li>
-</ul>
+<p>With this forked network running locally, teams can validate ledger logic, Soroban contracts, and
+observability tooling ahead of wider deployments.</p>
 
 
 

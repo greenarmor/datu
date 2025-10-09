@@ -8,6 +8,8 @@ nav:
   - Architecture & Protocol:
       - Reference Architecture: ARCHITECTURE.md
       - Stellar Consensus Protocol: consensus-scp.md
+  - Infrastructure:
+      - Stellar Fork Environment: stellar-fork-environment.md
   - Delivery Roadmap:
       - Implementation Plan: IMPLEMENTATION_PLAN.md
       - Project Mobilization: project-mobilization.md
@@ -30,6 +32,9 @@ markdown_extensions:
   - toc:
       permalink: true
 plugins:
-  - search
+  - search:
+      lang: en
+hooks:
+  - mkdocs_hooks.py
 extra:
   social_image: assets/datu-social-cover.jpg
