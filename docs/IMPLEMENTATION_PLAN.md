@@ -27,7 +27,15 @@ This roadmap outlines the key milestones required to turn the DATU reference arc
    * Compliance tracker shows all critical legal and regulatory questions assigned with target resolution dates.
    * Collaboration infrastructure checklist is complete, and a mobilization status report confirms stakeholders can join development activities without blockers.
 
+> **Status Update (2025-10-09):** To accelerate the Stellar fork, the steering committee authorized Phase 1 engineering work to begin while the remaining Phase 0 items are tracked in a mobilization backlog. Owners must continue closing open governance, compliance, and tooling tasks in parallel so the deferred exit criteria can be met immediately after the fork is stabilized.
+
 ## Phase 1 – Consensus Network Foundation (Weeks 3-10)
+
+### Immediate Kickoff Priorities
+
+* Stand up a shared "Phase 0 Backlog" tracker that lists each outstanding mobilization deliverable, its current owner, and the dependency it unblocks in the network rollout.
+* Publish a joint risk register summarizing the implications of running Phase 1 before Phase 0 concludes, including mitigation checkpoints (e.g., legal reviews, validator onboarding approvals) tied to specific fork milestones.
+* Confirm communication cadences between engineering leads and mobilization coordinators so regulatory or governance blockers discovered during development can be escalated without slowing validator work.
 
 1. **Stellar Fork Preparation**
    * Clone Stellar Core and Horizon repositories.

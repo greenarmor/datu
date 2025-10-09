@@ -8,6 +8,8 @@ og_image: assets/datu-social-cover.jpg
 
 This suggested mobilization agenda provides an early alert for stakeholders so they can prepare the governance and collaboration foundations needed before engineering execution accelerates. It distills the Phase 0 priorities from the DATU Implementation Plan into concrete prompts that community coordinators can act on immediately.
 
+> **Status Update (2025-10-09):** Phase 1 engineering work on the Stellar fork has begun. Treat the activities below as the "Phase 0 backlog" to close alongside network development so the project can certify mobilization readiness as soon as the fork stabilizes.
+
 ## Immediate Mobilization Signals
 
 - **Confirm Steering Committee Invitations**

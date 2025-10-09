@@ -9,6 +9,12 @@ og_image: assets/datu-social-cover.jpg
 This changelog captures notable updates to the DATU repository and documentation hub. Add a dated entry whenever meaningful
 work is merged so contributors can quickly review recent activity.
 
+## 2025-10-09 – Phase 1 Kickoff with Deferred Mobilization Wrap-up
+
+- Authorized the consensus network team to begin Phase 1 Stellar fork work while remaining Phase 0 mobilization tasks stay in a tracked backlog.
+- Published guidance in the implementation plan outlining immediate coordination checkpoints so governance, compliance, and tooling owners continue closing their deliverables during the fork.
+- Established a shared risk register to monitor any blockers created by running mobilization and engineering activities in parallel.
+
 ## 2025-10-08 – Project Mobilization Suggestion Published
 
 - Documented a mobilization suggestion memo to alert stakeholders about immediate governance and coordination actions for Phase 0.
