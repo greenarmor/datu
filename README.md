@@ -60,14 +60,18 @@ To establish a **global trust infrastructure** where **governments and citizens 
 
 ---
 
-## Implementation Resources
+## Documentation Roadmap
 
-The following documents outline how to materialize the DATU concept into a working platform:
+Review the core materials in the following order to build a shared understanding before diving into delivery work:
 
-* [`ARCHITECTURE.md`](./ARCHITECTURE.md) – Reference architecture covering consensus, smart contracts, application layer, identity, and security.
-* [`IMPLEMENTATION_PLAN.md`](./IMPLEMENTATION_PLAN.md) – Phase-by-phase roadmap detailing activities, deliverables, and success metrics, beginning with a community-first mobilization phase where citizens shape governance, legal priorities, and collaboration tooling.
-* [`project-mobilization.md`](./project-mobilization.md) – Suggestion memo that alerts stakeholders to begin Phase 0 coordination activities and align on governance logistics.
-* **Documentation Portal** – MkDocs-powered site that publishes the contents of the `docs/` directory to GitHub Pages (see below for setup details).
+1. **Government Blockchain Explainer** – Strategic rationale for sovereign civic blockchains, contrasting them with speculative third-party networks and outlining why citizens and public agencies should co-own the ledger.
+2. [`ARCHITECTURE.md`](./ARCHITECTURE.md) – Reference architecture covering consensus, smart contracts, application layer, identity, and security so contributors can see how the pieces fit together.
+3. **Consensus – Stellar SCP Primer** – Deep dive into the Stellar Consensus Protocol (SCP) to clarify how federated Byzantine agreement upholds DATU’s accountability requirements.
+4. [`IMPLEMENTATION_PLAN.md`](./IMPLEMENTATION_PLAN.md) – Phase-by-phase roadmap detailing activities, deliverables, and success metrics, beginning with a community-first mobilization phase where citizens shape governance, legal priorities, and collaboration tooling.
+5. [`project-mobilization.md`](./project-mobilization.md) – Suggestion memo that alerts stakeholders to begin Phase 0 coordination activities and align on governance logistics.
+6. [`project-progress.md`](./project-progress.md) – Running changelog capturing what has shipped so newcomers can quickly assess momentum and context.
+
+The MkDocs portal mirrors this order in the navigation so readers can progress from "why" to "how" without losing context.
 
 ---
 

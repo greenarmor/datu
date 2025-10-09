@@ -1,13 +1,16 @@
 site_name: DATU Documentation
 site_description: "Documentation hub for the Decentralized Accountable Trust Union"
 nav:
-  - Home: index.md
-  - Architecture: ARCHITECTURE.md
-  - Implementation Plan: IMPLEMENTATION_PLAN.md
-  - Project Mobilization: project-mobilization.md
-  - Government Blockchain Explainer: government-blockchain-explainer.md
-  - Consensus: consensus-scp.md
-  - Project Progress: project-progress.md
+  - Overview:
+      - Home: index.md
+      - Government Blockchain Explainer: government-blockchain-explainer.md
+  - Architecture & Protocol:
+      - Reference Architecture: ARCHITECTURE.md
+      - Stellar Consensus Protocol: consensus-scp.md
+  - Delivery Roadmap:
+      - Implementation Plan: IMPLEMENTATION_PLAN.md
+      - Project Mobilization: project-mobilization.md
+      - Project Progress: project-progress.md
 docs_dir: docs
 theme:
   name: material
