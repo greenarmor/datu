@@ -1,9 +1,10 @@
 {% extends "base/partials/meta.html" %}
 {% block canonical %}
   {{ super() }}
-  {% if page.meta.og_image %}
-    <meta property="og:image" content="{{ page.meta.og_image | url }}">
-    <meta name="twitter:image" content="{{ page.meta.og_image | url }}">
+  {% set og_image = page.meta.og_image or config.extra.social_image %}
+  {% if og_image %}
+    <meta property="og:image" content="{{ og_image | url }}">
+    <meta name="twitter:image" content="{{ og_image | url }}">
   {% endif %}
   {% if page.meta.description %}
     <meta property="og:description" content="{{ page.meta.description }}">

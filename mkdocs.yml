@@ -31,3 +31,5 @@ markdown_extensions:
       permalink: true
 plugins:
   - search
+extra:
+  social_image: assets/datu-social-cover.jpg
