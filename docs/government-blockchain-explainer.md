@@ -1,3 +1,9 @@
+---
+title: Why Governments Should Operate Their Own Civic Blockchain
+description: Strategic explainer outlining the sovereignty, accountability, and citizen-participation benefits of a government-operated civic blockchain and the mobilization steps DATU recommends.
+og_image: assets/datu-social-cover.jpg
+---
+
 # Why Governments Should Operate Their Own Civic Blockchain
 
 ## Executive Summary

@@ -1,3 +1,9 @@
+---
+title: Why DATU Chooses the Stellar Consensus Protocol (SCP)
+description: Explains how the Stellar Consensus Protocol's federated Byzantine agreement supports DATU's citizen-led governance, performance, and resilience goals.
+og_image: assets/datu-social-cover.jpg
+---
+
 # Why DATU Chooses the Stellar Consensus Protocol (SCP)
 
 The Decentralized Accountable Trust Union (DATU) is designed to uphold public accountability while remaining responsive to the communities it serves. Selecting the right consensus protocol is core to that mission. This article explains why DATU adopts the Stellar Consensus Protocol (SCP) and offers an “explain like I’m five” (ELI5) view of Stellar’s take on Byzantine agreement.

@@ -1,5 +1,6 @@
 site_name: DATU Documentation
 site_description: "Documentation hub for the Decentralized Accountable Trust Union"
+site_url: "https://datuph.github.io/datu"
 nav:
   - Overview:
       - Home: index.md
@@ -14,6 +15,7 @@ nav:
 docs_dir: docs
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
     - scheme: default
       toggle:
@@ -27,3 +29,5 @@ markdown_extensions:
   - admonition
   - toc:
       permalink: true
+plugins:
+  - search

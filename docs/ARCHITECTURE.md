@@ -1,3 +1,9 @@
+---
+title: DATU Reference Architecture
+description: Reference architecture detailing DATU's system goals, component model, and security considerations for a citizen-powered transparency ledger.
+og_image: assets/datu-social-cover.jpg
+---
+
 # DATU Reference Architecture
 
 This document translates the high-level vision in the root `README.md` into a concrete, implementable architecture for the Decentralized Accountable Trust Union (DATU).

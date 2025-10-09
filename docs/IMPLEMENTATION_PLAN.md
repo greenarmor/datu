@@ -1,3 +1,9 @@
+---
+title: DATU Implementation Plan
+description: Phased roadmap detailing mobilization tasks, network setup, smart contract delivery, and rollout milestones required to launch DATU.
+og_image: assets/datu-social-cover.jpg
+---
+
 # DATU Implementation Plan
 
 This roadmap outlines the key milestones required to turn the DATU reference architecture into a production-ready platform.

@@ -1,3 +1,9 @@
+---
+title: Project Progress
+description: Running changelog documenting notable updates to the DATU repository and documentation portal for contributors.
+og_image: assets/datu-social-cover.jpg
+---
+
 # Project Progress
 
 This changelog captures notable updates to the DATU repository and documentation hub. Add a dated entry whenever meaningful

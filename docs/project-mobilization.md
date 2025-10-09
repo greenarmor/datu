@@ -1,3 +1,9 @@
+---
+title: Project Mobilization Suggestion
+description: Mobilization agenda turning DATU Phase 0 priorities into actionable coordination, regulatory, and infrastructure checklists for stakeholders.
+og_image: assets/datu-social-cover.jpg
+---
+
 # Project Mobilization Suggestion
 
 This suggested mobilization agenda provides an early alert for stakeholders so they can prepare the governance and collaboration foundations needed before engineering execution accelerates. It distills the Phase 0 priorities from the DATU Implementation Plan into concrete prompts that community coordinators can act on immediately.

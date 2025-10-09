@@ -1,3 +1,9 @@
+---
+title: Decentralized Accountable Trust Union (DATU)
+description: Overview of DATU's mission, principles, vision, and documentation roadmap for building a transparent governance ledger.
+og_image: assets/datu-social-cover.jpg
+---
+
 [![License: OGL-PH v1.0](https://img.shields.io/badge/License-OGL--PH%20v1.0-brightgreen.svg)](https://datuph.org)
 # Decentralized Accountable Trust Union (DATU)
 
