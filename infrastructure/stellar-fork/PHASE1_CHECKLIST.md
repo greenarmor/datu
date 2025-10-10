@@ -16,25 +16,28 @@ waiting for formal documentation drops.
 
 ## 2. Network Parameter Definition
 
-- [ ] Draft a `NETWORK_PASSPHRASE` and ledger metadata that matches DATU naming
-      conventions (e.g., `DATU Testnet 01`).
-- [ ] Define the initial validator roster with tier classification, public keys,
+- [x] Draft a `NETWORK_PASSPHRASE` and ledger metadata that matches DATU naming
+      conventions (e.g., `DATU Testnet 01`). See
+      [`config/stellar-core.cfg`](./config/stellar-core.cfg) and
+      [`config/ledger-parameters.md`](./config/ledger-parameters.md).
+- [x] Define the initial validator roster with tier classification, public keys,
       and quorum set weights; encode this in
       [`config/quorumsets.toml`](./config/quorumsets.toml).
-- [ ] Produce a seed account inventory with intended use cases (treasury,
+- [x] Produce a seed account inventory with intended use cases (treasury,
       integration testing, observability) and model balances in
       [`config/accounts.json`](./config/accounts.json).
-- [ ] Enumerate ledger parameter deltas (ledger close time, max transactions)
+- [x] Enumerate ledger parameter deltas (ledger close time, max transactions)
       compared to Stellar public network and document rationale in commit
-      messages for auditability.
+      messages for auditability. Tracked in
+      [`config/ledger-parameters.md`](./config/ledger-parameters.md).
 
 ## 3. Local Fork Configuration
 
-- [ ] Extend the Docker Compose service with explicit environment variables for
+- [x] Extend the Docker Compose service with explicit environment variables for
       the DATU passphrase and core configuration overrides.
-- [ ] Provide sample Soroban settings (`config/soroban.toml`) that reflect
+- [x] Provide sample Soroban settings (`config/soroban.toml`) that reflect
       contract execution budgets required by downstream teams.
-- [ ] Script a deterministic volume reset (`scripts/stellar-fork/reset.sh`) so
+- [x] Script a deterministic volume reset (`scripts/stellar-fork/reset.sh`) so
       engineers can wipe state between test cycles without hunting Docker
       commands.
 

@@ -10,6 +10,7 @@ services:
       - "--enable-soroban-diagnostic-events"
     environment:
       NETWORK: local
+      NETWORK_PASSPHRASE: "DATU Testnet 01"
       ENABLE_SOROBAN_RPC: "true"
       ENABLE_SOROBAN_DIAGNOSTIC_EVENTS: "true"
     ports:
@@ -18,7 +19,10 @@ services:
       - "11626:11626"  # Stellar Core HTTP admin port
     volumes:
       - datu-stellar-state:/var/lib/stellar
-      - ./config:/config
+      - ./config/stellar-core.cfg:/opt/stellar/core/etc/stellar-core.cfg:ro
+      - ./config/quorumsets.toml:/opt/stellar/core/etc/quorumsets.toml:ro
+      - ./config/soroban.toml:/opt/stellar/stellar-rpc/etc/soroban.toml:ro
+      - ./config/accounts.json:/opt/stellar/friendbot/etc/accounts.json:ro
     restart: unless-stopped
 volumes:
   datu-stellar-state:

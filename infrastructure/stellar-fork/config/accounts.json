@@ -1,0 +1,27 @@
+{
+  "network_passphrase": "DATU Testnet 01",
+  "notes": "Pre-provisioned accounts used to exercise the DATU Stellar fork.",
+  "accounts": [
+    {
+      "name": "treasury",
+      "public_key": "GCQRLWKRW7VZP77HJRS4I4DF63VJXZ3OTIIDF5NB44POEPP7RHFIRMH5",
+      "secret_seed": "SDPGFTGHQUHTLMJFTSIITZAGBKNGNNWUYFQJMG6NEG4XY5QADJHZJNGG",
+      "starting_balance": "500000000",
+      "purpose": "Backstop DATU monetary operations and fund validator rewards."
+    },
+    {
+      "name": "integration",
+      "public_key": "GD2U5D4TD7IPGJ37K72OLLP36QSCSMQT7TSZ4JCHBRV4IOZIJCA2EVLO",
+      "secret_seed": "SBUFF5JCKS5XNWKTXG6IH4FQLVSWPP4M4K4COQ6IOW5ZBAGVORWPOM25",
+      "starting_balance": "250000000",
+      "purpose": "Support external partner onboarding and API validation."
+    },
+    {
+      "name": "observability",
+      "public_key": "GBBQHUXVETSLRT7AGEIL5N2Y4XWAPDVR2IPIFHE3TSCVB7J6NOHXXUT5",
+      "secret_seed": "SDNPJCZOVXIF6GXGL56KOCF5NYMCFBER3JWLHRNLF2AKRGGVGVJHGHEY",
+      "starting_balance": "100000000",
+      "purpose": "Drive telemetry, alerting, and automated ledger health checks."
+    }
+  ]
+}

@@ -48,6 +48,18 @@ The command returns a transaction hash confirming that the forked ledger created
 your account. Horizon’s API is available at `http://localhost:8000`, and Soroban JSON-RPC is
 served at `http://localhost:8000/rpc`.
 
+### Resetting the Network
+
+Use the reset helper whenever you need a clean ledger snapshot:
+
+```bash
+./scripts/stellar-fork/reset.sh
+```
+
+The script shuts down the stack, removes the `datu-stellar-state` Docker volume, and relaunches
+the services with pristine configuration. This keeps test runs deterministic without manually
+chaining Docker commands.
+
 ## Stopping the Network
 
 ```bash
@@ -60,9 +72,15 @@ Docker volume. Relaunching the network resumes from the last closed ledger.
 ## Customising the Fork
 
 * Update files inside [`config/`](./config) to tune quorum sets, seed accounts, or Soroban flags.
-  Mounting the folder into the container at `/config` lets you layer additional configuration
-  files on top of the defaults shipped by the quickstart image.
-* To regenerate a brand-new fork, remove the Docker volume created by the compose file:
+  The compose file mounts specific overrides into the quickstart container:
+  * [`stellar-core.cfg`](./config/stellar-core.cfg) – pins the DATU passphrase, validator roster,
+    and ledger parameter tweaks.
+  * [`quorumsets.toml`](./config/quorumsets.toml) – declarative description of validator tiers.
+  * [`accounts.json`](./config/accounts.json) – seed account inventory for Friendbot funding.
+  * [`soroban.toml`](./config/soroban.toml) – RPC and execution limits for Soroban workloads.
+* `docker-compose` exports `NETWORK_PASSPHRASE="DATU Testnet 01"` so signatures are scoped to
+  the DATU fork.
+* To regenerate a brand-new fork manually, remove the Docker volume created by the compose file:
 
   ```bash
   docker volume rm datu-stellar-state

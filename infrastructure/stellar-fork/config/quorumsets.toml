@@ -1,0 +1,58 @@
+# DATU Stellar fork validator roster and quorum structure.
+#
+# This file is mounted into the quickstart container at
+# /opt/stellar/core/etc/quorumsets.toml so stellar-core consumes the
+# custom quorum definition on boot. The layout mirrors the TOML syntax
+# described in stellar-core's sample configuration.
+
+[[HOME_DOMAINS]]
+HOME_DOMAIN = "validators.datu.foundation"
+QUALITY = "HIGH"
+
+[[HOME_DOMAINS]]
+HOME_DOMAIN = "validators.datu.foundation.backup"
+QUALITY = "MEDIUM"
+
+[[VALIDATORS]]
+NAME = "datu-tier1-east"
+HOME_DOMAIN = "validators.datu.foundation"
+QUALITY = "HIGH"
+PUBLIC_KEY = "GDPYUV3STVBCD4LPIRI4WWKJ56BSHHDFMDLUEIV27OMBNC5NZMYMBAXR"
+ADDRESS = "core-east.datu.foundation:11625"
+HISTORY = "curl -sf https://history.datu.foundation/core-east/{0} -o {1}"
+
+[[VALIDATORS]]
+NAME = "datu-tier1-west"
+HOME_DOMAIN = "validators.datu.foundation"
+QUALITY = "HIGH"
+PUBLIC_KEY = "GBJN2ZJG2CMGOBIYKMRJRJTXHA3XYPJ3S4URATUNNDZILSSXBRQ2QFAG"
+ADDRESS = "core-west.datu.foundation:11625"
+HISTORY = "curl -sf https://history.datu.foundation/core-west/{0} -o {1}"
+
+[[VALIDATORS]]
+NAME = "datu-tier2"
+HOME_DOMAIN = "validators.datu.foundation.backup"
+QUALITY = "MEDIUM"
+PUBLIC_KEY = "GBET6RIVFGEE5XCYX6BF7CYPT4LNEB4YQZVRNMHZO4DVQS7M5OLCOUW3"
+ADDRESS = "core-tier2.datu.foundation:11625"
+HISTORY = "curl -sf https://history.datu.foundation/core-tier2/{0} -o {1}"
+
+# Explicit quorum sets keep the validator ordering auditable even if the
+# automatic generator changes. The top-level definition relies on both
+# Tier 1 validators while cascading to the Tier 2 member if either
+# primary is unavailable.
+[QUORUM_SET]
+THRESHOLD_PERCENT = 67
+VALIDATORS = [
+  "$self",
+  "datu-tier1-east",
+  "datu-tier1-west"
+]
+
+[QUORUM_SET.1]
+THRESHOLD_PERCENT = 67
+VALIDATORS = [
+  "datu-tier1-east",
+  "datu-tier1-west",
+  "datu-tier2"
+]

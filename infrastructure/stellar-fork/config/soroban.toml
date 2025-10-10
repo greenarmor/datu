@@ -1,0 +1,28 @@
+# Soroban execution and RPC tuning for the DATU fork.
+#
+# The quickstart container reads this file via the volume mount declared in
+# docker-compose.yml and applies the overrides to stellar-rpc on boot.
+
+[budget]
+# Allow contracts with heavy CPU footprints while keeping guard rails for
+# runaway requests. Values are specified in instructions, memory bytes,
+# and ledger entry counts.
+instructions = 200_000_000
+memory_bytes = 8_000_000
+ledger_read_entries = 600
+ledger_write_entries = 300
+ledger_read_bytes = 3_000_000
+ledger_write_bytes = 1_500_000
+
+[rpc]
+# Tighten the default pagination and payload limits so downstream teams
+# can reason about worst case RPC sizes.
+events_page_size = 200
+evictions_page_size = 50
+max_request_body_bytes = 1_048_576
+max_events_filters = 64
+
+[diagnostics]
+# Surface contract logs and metrics for observability teams.
+enabled = true
+export_json = true
