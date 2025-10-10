@@ -71,6 +71,9 @@ Docker volume. Relaunching the network resumes from the last closed ledger.
 * When you are ready to promote the fork to a multi-validator topology, add additional
   services to the compose file that reference the same network passphrase but unique
   node seeds.
+* Track day-to-day engineering progress for this workstream in the
+  [Phase 1 checklist](./PHASE1_CHECKLIST.md), which captures the actions required to
+  parameterise the network for DATU and wire it into CI/operations tooling.
 
 ## Troubleshooting
 
